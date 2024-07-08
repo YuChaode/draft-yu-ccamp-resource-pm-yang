@@ -24,7 +24,7 @@ venue:
   latest: "https://YuChaode.github.io/draft-yu-ccamp-resource-pm-yang/draft-yu-ccamp-resource-pm-yang.html"
 
 author:
- -
+  -
     fullname: Chaode Yu
     organization: Huawei Technologies
     email: yuchaode@huawei.com
@@ -65,15 +65,6 @@ normative:
     date:  2011
     seriesinfo: TMF518_RPM
     target: https://www.tmforum.org/resources/collection/mtosi-4-0
-
-  ITU-T_G.7710:
-    title: Common equipment management function requirements
-    author:
-      org: International Telecommunication Union
-    date:  October 2020
-    seriesinfo: ITU-T Recommendation G.7710
-    target: https://www.itu.int/rec/T-REC-G.7710/en
-
   ITU-T_G.874:
     title: Management aspects of optical transport network elements
     author:
@@ -90,9 +81,9 @@ This document defines a YANG data model for resource Performance Monitoring, app
 
 # Introduction
 
-Resource performance monitoring is a basic function of network management. By viewing and analyzing the performance data of different resources (such as network element, interface, board, termination point, tunnel termination point) operators can detect the running state of the network in time, quickly resolve real-time problems or identify major risks in advanced , avoiding users' complaints.  
+Resource performance monitoring is a basic function of network management. By viewing and analyzing the performance data of different resources (such as network element, interface, board, termination point, tunnel termination point) operators can detect the running state of the network in time, quickly resolve real-time problems or identify major risks in advanced , avoiding users' complaints.
 
-According to the business requirements stated in {{TMF-518}}, resource performance monitoring requirements include: 
+According to the business requirements stated in {{TMF-518}}, resource performance monitoring requirements include:
 
 - Retrieval of current and historical performance measurements for network resources
 - Distribution of Threshold Crossing Alerts (TCAs) to the collectors of PM data
@@ -111,7 +102,7 @@ Currently, there are some existing documents related to performance monitoring i
 
 {{?I-D.ietf-teas-actn-pm-telemetry-autonomics}} provides a YANG data model that describes performance monitoring and scaling intent mechanisms for TE-Tunnels and Virtual Networks(VNs). {{?I-D.ietf-opsawg-yang-vpn-service-pm}} defines a YANG data model for performance monitoring of both network topology layer and overlay VPN service topology layer. {{?I-D.zheng-ccamp-client-pm-yang}} provides a performance monitoring YANG data model on client signal level. {{!RFC8194}} defines a data model for Large-Scale Measurement Platforms(LMAP), focusing on  task capability and configuration of massive measurement agents.
 
-This document defines a YANG module for resource performance monitoring, which defines the capabilities of resource performance monitoring, the tca configuration model of a specific resource. In addition, the sub-module of monitoring task and a few RPCs are defined to support the operations of performance monitoring, such as data retrieval and controlling the monitoring tasks. 
+This document defines a YANG module for resource performance monitoring, which defines the capabilities of resource performance monitoring, the tca configuration model of a specific resource. In addition, the sub-module of monitoring task and a few RPCs are defined to support the operations of performance monitoring, such as data retrieval and controlling the monitoring tasks.
 
 The YANG data model defined in this document conforms to the Network Management Datastore Architecture (NMDA) defined in {{!RFC8342}}.
 
@@ -134,7 +125,7 @@ The following terms are defined in {{?RFC8454}} and are not redefined here:
 *  CNC
 *  PNC
 
-//To Be Added: some explanation of performance indicator
+> To Be Added: some explanation of performance indicator
 
 ## Tree Diagram
 A simplified graphical representation of the data model is used in Section 3 of this document.  The meaning of the symbols in these diagrams are defined in {{!RFC8340}}.
@@ -157,13 +148,13 @@ Please replace XXXX with the RFC number assigned to this document.
 
 ## Capabilities of Resource Performance Monitoring
 ### Supported Resources and Corresponding PM Capabilities
-A generic “resources” structure is defined to describe the objects that could be monitored:
+A generic "resources" structure is defined to describe the objects that could be monitored:
 
-* “resource”:  the identifier of a monitored object
-* “resource-type”: indicate what exact kind of resource is
-* “holding time”: the longest time period that performance data could be monitored 
-* “indicator name”: the indicators that could be monitored for the resource
-* “sub-resources”: the identifier of the performace monitoring point of this resource (e.g., if the resource is a network element, the sub resources may be a list of termination points)
+* "resource":  the identifier of a monitored object
+* "resource-type": indicate what exact kind of resource is
+* "holding time": the longest time period that performance data could be monitored
+* "indicator name": the indicators that could be monitored for the resource
+* "sub-resources": the identifier of the performace monitoring point of this resource (e.g., if the resource is a network element, the sub resources may be a list of termination points)
 
 
 ~~~~ ascii-art
@@ -205,24 +196,24 @@ For an interface, following are possible indicators:
 
 For a board, following are possible indicators:
 * CPU usage.
-* Memory usage. 
+* Memory usage.
 
 ## Threshold Crossing Alert Control
 Threshold crossing alert control parameters could be set directly for a resource, or set through applying an existing profile to the resource. Therefore, there are four main requirements for Threshold Crossing Alert Control:
 
-* Creation/retrieval/deletion/updating of TCA profile; 
-* Enabling/disabling TCA reporting on the resource; 
+* Creation/retrieval/deletion/updating of TCA profile;
+* Enabling/disabling TCA reporting on the resource;
 * Configuring TCA on the resource by associating an existing profile;
 * Configuring TCA on the resource by detailed parameters.
 
-To satisfy the above requirements, the module defines "tca-management", including the "profile" structure to enable the preset of tca parameters, “tca” structure to describe the tca parameters (directly set or preset by applying profiles) and tca status of a specific resource.
+To satisfy the above requirements, the module defines "tca-management", including the "profile" structure to enable the preset of tca parameters, "tca" structure to describe the tca parameters (directly set or preset by applying profiles) and tca status of a specific resource.
 
 And for the TCA parameters, no matter it is configured directly on the resource or by a preset profile, there should not be any differences. The TCA parameters (tca-indicator) should include:
 
-* Threshold-type: This threshold type is used to indicate when the alert will be triggered.  By exceeding the upper bound value, or by below the lower bound value. 
-* Period: This period is used to indicate the frequency of the data collection. 
-* Severity: This severity is used to indicate what level of alert would be triggered if cross the threshold. 
-* Indicator-value: The value of threshold. 
+* Threshold-type: This threshold type is used to indicate when the alert will be triggered.  By exceeding the upper bound value, or by below the lower bound value.
+* Period: This period is used to indicate the frequency of the data collection.
+* Severity: This severity is used to indicate what level of alert would be triggered if cross the threshold.
+* Indicator-value: The value of threshold.
 * Indicator-value-unit: The unit of threshold value.
 
 In addition, the function of enabling/disabling TCA on the resource can be controlled by the "admin-status" attribute in "tca" node. The pre-defined profiles with unique profile id could be applied to "tca" node, shown as "applied-profiles" in "tca" node.
@@ -511,9 +502,9 @@ module ietf-resource-pm {
     description
       "the root node.";
 
-    uses resource-info-grouping; 
+    uses resource-info-grouping;
     uses tca-management-grouping;
-    uses monitoring-tasks-grouping;    
+    uses monitoring-tasks-grouping;
   }
 
   grouping resource-info-grouping {
@@ -544,7 +535,6 @@ module ietf-resource-pm {
           type identityref {
             base rpm-types:resource-type;
         }
-          
         config false;
           description
           "the type of resource, such as NE, board or port"；
@@ -574,7 +564,6 @@ module ietf-resource-pm {
           point contained in this NE, the sub-resource should be the
           logic channel on this TP";
       config false;
-          
       type leafref {
         path "../rpm:resource";
       }
@@ -970,10 +959,8 @@ module ietf-resource-pm {
       leaf is-requesting-history-data {
         description
         "true indicate this is a request for historic data, then start-time and end-time should be assigned";
-        
         type boolean;
       }
-      
       leaf start-time {
         description
         "the starttime of performance data needed to be retrieved";
@@ -1089,7 +1076,6 @@ module ietf-resource-pm {
 
         type yang:uuid;
     }
-    
     leaf collect-time {
       description
         "the time of this data is collected";
@@ -1234,7 +1220,7 @@ module ietf-resource-pm-types {
 
    identity interface {
       base resource-type;
-      description “Network interface”;
+      description "Network interface";
    }
 
 
