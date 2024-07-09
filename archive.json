@@ -1,0 +1,103 @@
+{
+  "magic": "E!vIA5L86J2I",
+  "timestamp": "2024-07-09T00:29:06.376374+00:00",
+  "repo": "YuChaode/draft-yu-ccamp-resource-pm-yang",
+  "labels": [
+    {
+      "name": "bug",
+      "description": "Something isn't working",
+      "color": "d73a4a"
+    },
+    {
+      "name": "documentation",
+      "description": "Improvements or additions to documentation",
+      "color": "0075ca"
+    },
+    {
+      "name": "duplicate",
+      "description": "This issue or pull request already exists",
+      "color": "cfd3d7"
+    },
+    {
+      "name": "enhancement",
+      "description": "New feature or request",
+      "color": "a2eeef"
+    },
+    {
+      "name": "help wanted",
+      "description": "Extra attention is needed",
+      "color": "008672"
+    },
+    {
+      "name": "good first issue",
+      "description": "Good for newcomers",
+      "color": "7057ff"
+    },
+    {
+      "name": "invalid",
+      "description": "This doesn't seem right",
+      "color": "e4e669"
+    },
+    {
+      "name": "question",
+      "description": "Further information is requested",
+      "color": "d876e3"
+    },
+    {
+      "name": "wontfix",
+      "description": "This will not be worked on",
+      "color": "ffffff"
+    }
+  ],
+  "issues": [
+    {
+      "number": 1,
+      "id": "I_kwDOMTR0As6OuTOU",
+      "title": "Definition of the PM granularity period",
+      "url": "https://github.com/YuChaode/draft-yu-ccamp-resource-pm-yang/issues/1",
+      "state": "OPEN",
+      "author": "italobusi",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "We should use draft https://datatracker.ietf.org/doc/draft-ietf-netmod-schedule-yang/. \r\n\r\nYou can have a look how I use it in https://github.com/vlopezalvarez/draft-contreras-opsawg-scheduling-oam-tests/blob/main/Yang/ietf-oam-unitary-test.yang. I can change the YANG model if you agree\r\n\r\n_Originally posted by @vlopezalvarez in https://github.com/YuChaode/Optical-Network-Resource-PM/pull/3#discussion_r1666858397_\r\n            ",
+      "createdAt": "2024-07-08T02:00:54Z",
+      "updatedAt": "2024-07-08T03:10:11Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 2,
+      "id": "I_kwDOMTR0As6OuTWV",
+      "title": "Applicability to IP networks",
+      "url": "https://github.com/YuChaode/draft-yu-ccamp-resource-pm-yang/issues/2",
+      "state": "OPEN",
+      "author": "JinMingshuang",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Slides discussed during meeting on June 27.\r\n[IP updates and open issues 0627.pptx](https://github.com/user-attachments/files/16023738/IP.updates.and.open.issues.0627.pptx)\r\n\r\nThe corresponding PR:  https://github.com/YuChaode/Optical-Network-Resource-PM/pull/3\r\n",
+      "createdAt": "2024-06-28T03:13:43Z",
+      "updatedAt": "2024-07-08T03:10:33Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 3,
+      "id": "I_kwDOMTR0As6OuU1q",
+      "title": "Compile issue of YANG",
+      "url": "https://github.com/YuChaode/draft-yu-ccamp-resource-pm-yang/issues/3",
+      "state": "OPEN",
+      "author": "YuChaode",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "/tmp/tmpklf1nan7/ietf-resource-pm-types@2024-07-07.yang:64: error: [RFC 8407](https://datatracker.ietf.org/doc/rfc8407/): 4.8: statement \"revision\" must have a \"reference\" substatement\r\n/tmp/tmpklf1nan7/ietf-resource-pm-types@2024-07-07.yang:127: error: keyword \"base\" not in canonical order (see [RFC 7950](https://datatracker.ietf.org/doc/rfc7950/), Section 14)\r\n/tmp/tmpklf1nan7/ietf-resource-pm-types@2024-07-07.yang:133: error: keyword \"base\" not in canonical order (see [RFC 7950](https://datatracker.ietf.org/doc/rfc7950/), Section 14)\r\n/tmp/tmpklf1nan7/ietf-resource-pm-types@2024-07-07.yang:139: error: keyword \"base\" not in canonical order (see [RFC 7950](https://datatracker.ietf.org/doc/rfc7950/), Section 14)\r\n/tmp/tmpklf1nan7/ietf-resource-pm-types@2024-07-07.yang:145: error: keyword \"base\" not in canonical order (see [RFC 7950](https://datatracker.ietf.org/doc/rfc7950/), Section 14)",
+      "createdAt": "2024-07-08T03:15:32Z",
+      "updatedAt": "2024-07-08T03:15:32Z",
+      "closedAt": null,
+      "comments": []
+    }
+  ],
+  "pulls": []
+}
