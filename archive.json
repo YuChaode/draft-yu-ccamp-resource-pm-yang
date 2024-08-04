@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2024-08-01T00:33:13.451080+00:00",
+  "timestamp": "2024-08-04T00:32:52.071365+00:00",
   "repo": "YuChaode/draft-yu-ccamp-resource-pm-yang",
   "labels": [
     {
@@ -95,6 +95,22 @@
       "body": "/tmp/tmpklf1nan7/ietf-resource-pm-types@2024-07-07.yang:64: error: [RFC 8407](https://datatracker.ietf.org/doc/rfc8407/): 4.8: statement \"revision\" must have a \"reference\" substatement\r\n/tmp/tmpklf1nan7/ietf-resource-pm-types@2024-07-07.yang:127: error: keyword \"base\" not in canonical order (see [RFC 7950](https://datatracker.ietf.org/doc/rfc7950/), Section 14)\r\n/tmp/tmpklf1nan7/ietf-resource-pm-types@2024-07-07.yang:133: error: keyword \"base\" not in canonical order (see [RFC 7950](https://datatracker.ietf.org/doc/rfc7950/), Section 14)\r\n/tmp/tmpklf1nan7/ietf-resource-pm-types@2024-07-07.yang:139: error: keyword \"base\" not in canonical order (see [RFC 7950](https://datatracker.ietf.org/doc/rfc7950/), Section 14)\r\n/tmp/tmpklf1nan7/ietf-resource-pm-types@2024-07-07.yang:145: error: keyword \"base\" not in canonical order (see [RFC 7950](https://datatracker.ietf.org/doc/rfc7950/), Section 14)",
       "createdAt": "2024-07-08T03:15:32Z",
       "updatedAt": "2024-07-08T03:15:32Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 4,
+      "id": "I_kwDOMTR0As6RsvN_",
+      "title": "[IANA #1368562] Early review",
+      "url": "https://github.com/YuChaode/draft-yu-ccamp-resource-pm-yang/issues/4",
+      "state": "OPEN",
+      "author": "italobusi",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "> Section 3.8 of RFC 8407 says, \"Each normative YANG module MUST be registered in both the 'IETF XML Registry' [RFC3688] and the 'YANG Module Names' registry  [RFC6020] .  This applies to new modules and updated modules.\" \r\n> \r\n> For a recent example of an IANA Considerations section that registers an XML namespace URI and a YANG module name, see RFC 9468:\r\n> \r\n> https://www.rfc-editor.org/rfc/rfc9468.html\r\n> \r\n> You can see the IETF XML registry here:\r\n> \r\n> https://www.iana.org/assignments/xml-registry\r\n> \r\n> If you have any questions, just let us know. If you'd like to talk in person, you can find us next to the RFC Editor's table from Monday through Thursday. You can also request another review at any time by contacting us at [iana@iana.org](mailto:iana@iana.org).\r\n> \r\n> For more information about IANA Considerations section requirements, please see\r\n> \r\n> https://www.iana.org/help/protocol-registration",
+      "createdAt": "2024-08-02T08:45:31Z",
+      "updatedAt": "2024-08-02T08:45:31Z",
       "closedAt": null,
       "comments": []
     }
