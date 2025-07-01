@@ -5,7 +5,7 @@
 Common Control and Measurement Plane                               C. Yu
 Internet-Draft                                       Huawei Technologies
 Intended status: Standards Track                            F. Peruzzini
-Expires: 7 July 2025                                                 TIM
+Expires: 2 January 2026                                              TIM
                                                                 Y. Zheng
                                                             China Unicom
                                                                  I. Busi
@@ -18,7 +18,7 @@ Expires: 7 July 2025                                                 TIM
                                                                    CAICT
                                                                   M. Jin
                                                      Huawei Technologies
-                                                          3 January 2025
+                                                             1 July 2025
 
 
          A YANG Data Model for Resource Performance Monitoring
@@ -66,7 +66,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 7 July 2025.
+   This Internet-Draft will expire on 2 January 2026.
 
 Copyright Notice
 
@@ -1583,17 +1583,17 @@ module: ietf-resource-pm
               Ceccarelli, "YANG models for Virtual Network (VN)/TE
               Performance Monitoring Telemetry and Scaling Intent
               Autonomics", Work in Progress, Internet-Draft, draft-ietf-
-              teas-actn-pm-telemetry-autonomics-14, 19 October 2024,
+              teas-actn-pm-telemetry-autonomics-15, 21 April 2025,
               <https://datatracker.ietf.org/doc/html/draft-ietf-teas-
-              actn-pm-telemetry-autonomics-14>.
+              actn-pm-telemetry-autonomics-15>.
 
    [I-D.zheng-ccamp-client-pm-yang]
               Yu, C., Zheng, H., Busi, I., Yanlei, Z., Lopez, V., and O.
               G. de Dios, "A YANG Data Model for Client Signal
               Performance Monitoring", Work in Progress, Internet-Draft,
-              draft-zheng-ccamp-client-pm-yang-11, 4 September 2024,
+              draft-zheng-ccamp-client-pm-yang-12, 3 March 2025,
               <https://datatracker.ietf.org/doc/html/draft-zheng-ccamp-
-              client-pm-yang-11>.
+              client-pm-yang-12>.
 
    [RFC8454]  Lee, Y., Belotti, S., Dhody, D., Ceccarelli, D., and B.
               Yoon, "Information Model for Abstraction and Control of TE
