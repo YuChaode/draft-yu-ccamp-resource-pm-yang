@@ -30,8 +30,8 @@ author:
     email: yuchaode@huawei.com
   -
     name: Fabio Peruzzini
-    org: TIM
-    email: fabio.peruzzini@telecomitalia.it
+    org: FiberCop
+    email: fabio.peruzzini@fibercop.com
   -
     name: Yanlei Zheng
     org: China Unicom
