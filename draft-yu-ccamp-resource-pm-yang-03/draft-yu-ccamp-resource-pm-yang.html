@@ -1687,6 +1687,8 @@ module: ietf-resource-pm
 <figure id="figure-1">
         <div class="alignLeft art-ascii-art art-text artwork" id="section-3-1.1">
 <pre>
+=============== NOTE: '\' line wrapping per RFC 8792 ================
+
 module: ietf-resource-pm
   +--rw performance-monitoring
      +--rw resources
@@ -1702,7 +1704,9 @@ module: ietf-resource-pm
      |  |     +--rw profile-id      yang:uuid
      |  |     +--rw profile-name?   string
      |  |     +--rw tca-cfg
-     |  |        +--rw tca-indicator* [indicator-name threshold-type period severity]
+     |  |        +--rw tca-indicator*
+     |  |                [indicator-name threshold-type period \
+                                                            severity]
      |  |           +--rw indicator-name          string
      |  |           +--rw indicator-value         string
      |  |           +--rw indicator-value-unit    string
@@ -1711,14 +1715,16 @@ module: ietf-resource-pm
      |  |           +--rw severity                identityref
      |  +--rw tcas
      |     +--rw tca* [resource]
-     |        +--rw resource            -&gt; /performance-monitoring/resources/resource-list/resource
+     |        +--rw resource            leafref
      |        +--ro resource-type?      identityref
      |        +--rw admin-status?       enumeration
      |        +--rw applied-profiles
      |        |  +--rw profile* [profile-id]
-     |        |     +--rw profile-id    -&gt; ../../../../../profiles/profile/profile-id
+     |        |     +--rw profile-id    leafref
      |        +--rw tca-cfg
-     |           +--rw tca-indicator* [indicator-name threshold-type period severity]
+     |           +--rw tca-indicator*
+     |                   [indicator-name threshold-type period \
+                                                            severity]
      |              +--rw indicator-name          string
      |              +--rw indicator-value         string
      |              +--rw indicator-value-unit    string
@@ -1728,7 +1734,7 @@ module: ietf-resource-pm
      +--rw monitor-tasks
         +--rw monitor-task* [task-id]
            +--rw task-id          yang:uuid
-           +--rw resource?        -&gt; /performance-monitoring/resources/resource-list/resource
+           +--rw resource?        leafref
            +--ro resource-type?   identityref
            +--rw task-name?       string
            +--rw admin-status?    enumeration
@@ -1743,14 +1749,14 @@ module: ietf-resource-pm
   rpcs:
     +---x get-pm-data
     |  +---w input
-    |  |  +---w resources*                    -&gt; /performance-monitoring/resources/resource-list/resource
+    |  |  +---w resources*                    leafref
     |  |  +---w is-requesting-history-data?   boolean
     |  |  +---w start-time?                   yang:date-and-time
     |  |  +---w end-time?                     yang:date-and-time
     |  +--ro output
     |     +--ro pm-data
     |        +--ro pm-data-list* [resource]
-    |           +--ro resource          -&gt; /performance-monitoring/resources/resource-list/resource
+    |           +--ro resource          leafref
     |           +--ro task-id*          yang:uuid
     |           +--ro collect-time?     yang:date-and-time
     |           +--ro resource-type?    identityref
@@ -1761,15 +1767,14 @@ module: ietf-resource-pm
     |                 +--ro indicator-value-unit?   string
     +---x clear-performance-monitoring-data
     |  +---w input
-    |  |  +---w resources*   -&gt; /performance-monitoring/resources/resource-list/resource
+    |  |  +---w resources*   leafref
     |  +--ro output
-    |     +--ro failed-resources*   -&gt; /performance-monitoring/resources/resource-list/resource
+    |     +--ro failed-resources*   leafref
     +---x get-profile-associated-resources
        +---w input
-       |  +---w profile-id?   -&gt; /performance-monitoring/tca-management/profiles/profile/profile-id
+       |  +---w profile-id?   leafref
        +--ro output
-          +--ro resource-list*   -&gt; /performance-monitoring/resources/resource-list/resource
-
+          +--ro resource-list*   leafref
 </pre>
 </div>
 <figcaption><a href="#figure-1" class="selfRef">Figure 1</a>:
@@ -1786,7 +1791,7 @@ module: ietf-resource-pm
 <span id="name-resource-performance-monitori"></span><div id="fig-rpm-yang">
 <figure id="figure-2">
         <div class="breakable lang-yang sourcecode" id="section-4-1.1">
-<pre>&lt;CODE BEGINS&gt; file "ietf-resource-pm.yang"
+<pre>&lt;CODE BEGINS&gt; file "ietf-resource-pm@2025-07-04.yang"
 
 module ietf-resource-pm {
   yang-version 1.1;
@@ -1812,7 +1817,7 @@ module ietf-resource-pm {
                &lt;yuchaode@huawei.com&gt;
 
      Editor:   Fabio Peruzzini
-               &lt;fabio.peruzzini@telecomitalia.it&gt;
+               &lt;fabio.peruzzini@fibercop.com&gt;
 
      Editor:   Yanlei Zheng
                &lt;zhengyanlei@chinaunicom.cn&gt;
@@ -1839,7 +1844,7 @@ module ietf-resource-pm {
     The model fully conforms to the Network Management
     Datastore Architecture (NMDA).
 
-    Copyright (c) 2022 IETF Trust and the persons
+    Copyright (c) 2025 IETF Trust and the persons
     identified as authors of the code.  All rights reserved.
 
     Redistribution and use in source and binary forms, with or
@@ -1858,8 +1863,7 @@ module ietf-resource-pm {
     described in BCP 14 (RFC 2119) (RFC 8174) when, and only when,
     they appear in all capitals, as shown here.";
 
-
-  revision 2024-07-07 {
+  revision 2025-07-04 {
     description  "Initial revision.";
   }
 
@@ -1955,7 +1959,6 @@ module ietf-resource-pm {
       }
     }
   }
-
 
   grouping task-instance-grouping {
     description
@@ -2306,7 +2309,6 @@ module ietf-resource-pm {
     }
   }
 
-
   rpc get-pm-data {
     input {
 
@@ -2393,7 +2395,6 @@ module ietf-resource-pm {
   rpc get-profile-associated-resources {
     input {
 
-
       leaf profile-id {
         description
           "the identifier of profile which the client want to
@@ -2419,7 +2420,6 @@ module ietf-resource-pm {
       }
     }
   }
-
 
   grouping pm-data-instance-grouping {
     description
@@ -2514,7 +2514,7 @@ module ietf-resource-pm {
 <span id="name-resource-performance-monitorin"></span><div id="fig-rpm-type-yang">
 <figure id="figure-3">
         <div class="breakable lang-yang sourcecode" id="section-5-1.1">
-<pre>&lt;CODE BEGINS&gt; file "ietf-resource-pm-types.yang"
+<pre>&lt;CODE BEGINS&gt; file "ietf-resource-pm-types@2025-07-04.yang"
 
 module ietf-resource-pm-types {
   yang-version 1.1;
@@ -2533,7 +2533,7 @@ module ietf-resource-pm-types {
                &lt;yuchaode@huawei.com&gt;
 
      Editor:   Fabio Peruzzini
-               &lt;fabio.peruzzini@telecomitalia.it&gt;
+               &lt;fabio.peruzzini@fibercop.com&gt;
 
      Editor:   Yanlei Zheng
                &lt;zhengyanlei@chinaunicom.cn&gt;
@@ -2561,7 +2561,7 @@ module ietf-resource-pm-types {
     The model fully conforms to the Network Management
     Datastore Architecture (NMDA).
 
-    Copyright (c) 2022 IETF Trust and the persons
+    Copyright (c) 2025 IETF Trust and the persons
     identified as authors of the code.  All rights reserved.
 
     Redistribution and use in source and binary forms, with or
@@ -2580,8 +2580,7 @@ module ietf-resource-pm-types {
     described in BCP 14 (RFC 2119) (RFC 8174) when, and only when,
     they appear in all capitals, as shown here.";
 
-
-  revision 2024-07-07 {
+  revision 2025-07-04 {
     description  "Initial revision.";
 
   }
@@ -2599,7 +2598,6 @@ module ietf-resource-pm-types {
       base resource-type;
       description "Network interface";
    }
-
 
   identity board {
     base resource-type;
@@ -2672,7 +2670,6 @@ module ietf-resource-pm-types {
         retrieving the pm parameters supported";
   }
 }
-
 
 
 &lt;CODE ENDS&gt;</pre>
