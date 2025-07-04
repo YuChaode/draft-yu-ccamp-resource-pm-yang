@@ -1,0 +1,84 @@
+module: ietf-resource-pm
+  +--rw performance-monitoring
+     +--rw resources
+     |  +--rw resource-list* [resource]
+     |     +--rw resource          union
+     |     +--ro resource-type?    identityref
+     |     +--ro holding-time?     uint8
+     |     +--ro indicator-name*   string
+     |     +--ro sub-resources*    -> ../resource
+     +--rw tca-management
+     |  +--rw profiles
+     |  |  +--rw profile* [profile-id]
+     |  |     +--rw profile-id      yang:uuid
+     |  |     +--rw profile-name?   string
+     |  |     +--rw tca-cfg
+     |  |        +--rw tca-indicator*
+     |  |                [indicator-name threshold-type period severity]
+     |  |           +--rw indicator-name          string
+     |  |           +--rw indicator-value         string
+     |  |           +--rw indicator-value-unit    string
+     |  |           +--rw threshold-type          enumeration
+     |  |           +--rw period                  identityref
+     |  |           +--rw severity                identityref
+     |  +--rw tcas
+     |     +--rw tca* [resource]
+     |        +--rw resource            leafref
+     |        +--ro resource-type?      identityref
+     |        +--rw admin-status?       enumeration
+     |        +--rw applied-profiles
+     |        |  +--rw profile* [profile-id]
+     |        |     +--rw profile-id    leafref
+     |        +--rw tca-cfg
+     |           +--rw tca-indicator*
+     |                   [indicator-name threshold-type period severity]
+     |              +--rw indicator-name          string
+     |              +--rw indicator-value         string
+     |              +--rw indicator-value-unit    string
+     |              +--rw threshold-type          enumeration
+     |              +--rw period                  identityref
+     |              +--rw severity                identityref
+     +--rw monitor-tasks
+        +--rw monitor-task* [task-id]
+           +--rw task-id          yang:uuid
+           +--rw resource?        leafref
+           +--ro resource-type?   identityref
+           +--rw task-name?       string
+           +--rw admin-status?    enumeration
+           +--ro task-status?     enumeration
+           +--rw task-cfg
+              +--rw period?       identityref
+              +--rw indicators
+                 +--rw indicator* [indicator-name]
+                    +--rw indicator-name          string
+                    +--rw indicator-value-unit?   string
+
+  rpcs:
+    +---x get-pm-data
+    |  +---w input
+    |  |  +---w resources*                    leafref
+    |  |  +---w is-requesting-history-data?   boolean
+    |  |  +---w start-time?                   yang:date-and-time
+    |  |  +---w end-time?                     yang:date-and-time
+    |  +--ro output
+    |     +--ro pm-data
+    |        +--ro pm-data-list* [resource]
+    |           +--ro resource          leafref
+    |           +--ro task-id*          yang:uuid
+    |           +--ro collect-time?     yang:date-and-time
+    |           +--ro resource-type?    identityref
+    |           +--ro indicator-data
+    |              +--ro indicator-data-list* [indicator-name]
+    |                 +--ro indicator-name          string
+    |                 +--ro indicator-value?        string
+    |                 +--ro indicator-value-unit?   string
+    +---x clear-performance-monitoring-data
+    |  +---w input
+    |  |  +---w resources*   leafref
+    |  +--ro output
+    |     +--ro failed-resources*   leafref
+    +---x get-profile-associated-resources
+       +---w input
+       |  +---w profile-id?   leafref
+       +--ro output
+          +--ro resource-list*   leafref
