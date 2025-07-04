@@ -5,7 +5,7 @@
 Common Control and Measurement Plane                               C. Yu
 Internet-Draft                                       Huawei Technologies
 Intended status: Standards Track                            F. Peruzzini
-Expires: 2 January 2026                                              TIM
+Expires: 5 January 2026                                         FiberCop
                                                                 Y. Zheng
                                                             China Unicom
                                                                  I. Busi
@@ -18,7 +18,7 @@ Expires: 2 January 2026                                              TIM
                                                                    CAICT
                                                                   M. Jin
                                                      Huawei Technologies
-                                                             1 July 2025
+                                                             4 July 2025
 
 
          A YANG Data Model for Resource Performance Monitoring
@@ -66,7 +66,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 2 January 2026.
+   This Internet-Draft will expire on 5 January 2026.
 
 Copyright Notice
 
@@ -1616,8 +1616,8 @@ Authors' Addresses
 
 
    Fabio Peruzzini
-   TIM
-   Email: fabio.peruzzini@telecomitalia.it
+   FiberCop
+   Email: fabio.peruzzini@fibercop.com
 
 
    Yanlei Zheng
