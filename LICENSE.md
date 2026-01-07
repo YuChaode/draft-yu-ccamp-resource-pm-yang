@@ -1,4 +1,4 @@
 # License
 
 See the
-[guidelines for contributions](https://github.com/YuChaode/draft-yu-ccamp-resource-pm-yang/blob/main/CONTRIBUTING.md).
+[guidelines for contributions](https://github.com/italobusi/draft-yu-ccamp-resource-pm-yang/blob/fork/CONTRIBUTING.md).
