@@ -5,7 +5,7 @@
 Common Control and Measurement Plane                               C. Yu
 Internet-Draft                                       Huawei Technologies
 Intended status: Standards Track                            F. Peruzzini
-Expires: 5 January 2026                                         FiberCop
+Expires: 11 July 2026                                           FiberCop
                                                                 Y. Zheng
                                                             China Unicom
                                                                  I. Busi
@@ -18,7 +18,7 @@ Expires: 5 January 2026                                         FiberCop
                                                                    CAICT
                                                                   M. Jin
                                                      Huawei Technologies
-                                                             4 July 2025
+                                                          7 January 2026
 
 
          A YANG Data Model for Resource Performance Monitoring
@@ -66,11 +66,11 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 5 January 2026.
+   This Internet-Draft will expire on 11 July 2026.
 
 Copyright Notice
 
-   Copyright (c) 2025 IETF Trust and the persons identified as the
+   Copyright (c) 2026 IETF Trust and the persons identified as the
    document authors.  All rights reserved.
 
    This document is subject to BCP 78 and the IETF Trust's Legal
@@ -1582,17 +1582,17 @@ module: ietf-resource-pm
               Ceccarelli, "YANG models for Virtual Network (VN)/TE
               Performance Monitoring Telemetry and Scaling Intent
               Autonomics", Work in Progress, Internet-Draft, draft-ietf-
-              teas-actn-pm-telemetry-autonomics-15, 21 April 2025,
+              teas-actn-pm-telemetry-autonomics-16, 13 October 2025,
               <https://datatracker.ietf.org/doc/html/draft-ietf-teas-
-              actn-pm-telemetry-autonomics-15>.
+              actn-pm-telemetry-autonomics-16>.
 
    [I-D.zheng-ccamp-client-pm-yang]
               Yu, C., Zheng, H., Busi, I., Yanlei, Z., Lopez, V., and O.
               G. de Dios, "A YANG Data Model for Client Signal
               Performance Monitoring", Work in Progress, Internet-Draft,
-              draft-zheng-ccamp-client-pm-yang-12, 3 March 2025,
+              draft-zheng-ccamp-client-pm-yang-13, 29 August 2025,
               <https://datatracker.ietf.org/doc/html/draft-zheng-ccamp-
-              client-pm-yang-12>.
+              client-pm-yang-13>.
 
    [RFC8454]  Lee, Y., Belotti, S., Dhody, D., Ceccarelli, D., and B.
               Yoon, "Information Model for Abstraction and Control of TE
