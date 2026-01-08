@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-01-06T01:03:40.252910+00:00",
+  "timestamp": "2026-01-08T01:03:58.926605+00:00",
   "repo": "YuChaode/draft-yu-ccamp-resource-pm-yang",
   "labels": [
     {
@@ -111,6 +111,22 @@
       "body": "> Section 3.8 of RFC 8407 says, \"Each normative YANG module MUST be registered in both the 'IETF XML Registry' [RFC3688] and the 'YANG Module Names' registry  [RFC6020] .  This applies to new modules and updated modules.\" \r\n> \r\n> For a recent example of an IANA Considerations section that registers an XML namespace URI and a YANG module name, see RFC 9468:\r\n> \r\n> https://www.rfc-editor.org/rfc/rfc9468.html\r\n> \r\n> You can see the IETF XML registry here:\r\n> \r\n> https://www.iana.org/assignments/xml-registry\r\n> \r\n> If you have any questions, just let us know. If you'd like to talk in person, you can find us next to the RFC Editor's table from Monday through Thursday. You can also request another review at any time by contacting us at [iana@iana.org](mailto:iana@iana.org).\r\n> \r\n> For more information about IANA Considerations section requirements, please see\r\n> \r\n> https://www.iana.org/help/protocol-registration",
       "createdAt": "2024-08-02T08:45:31Z",
       "updatedAt": "2024-08-02T08:45:31Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 5,
+      "id": "I_kwDOMTR0As7h1hD_",
+      "title": "Nits",
+      "url": "https://github.com/YuChaode/draft-yu-ccamp-resource-pm-yang/issues/5",
+      "state": "OPEN",
+      "author": "italobusi",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "> idnits 2.17.1 \n> \n> draft-yu-ccamp-resource-pm-yang-04.txt:\n> \n>   Checking boilerplate required by RFC 5378 and the IETF Trust (see\n>   https://trustee.ietf.org/license-info):\n>   ----------------------------------------------------------------------------\n> \n>      No issues found here.\n> \n>   Checking nits according to https://www.ietf.org/id-info/1id-guidelines.txt:\n>   ----------------------------------------------------------------------------\n> \n>      No issues found here.\n> \n>   Checking nits according to https://www.ietf.org/id-info/checklist :\n>   ----------------------------------------------------------------------------\n> \n>   ** There are 39 instances of too long lines in the document, the longest\n>      one being 40 characters in excess of 72.\n> \n> \n>   Miscellaneous warnings:\n>   ----------------------------------------------------------------------------\n> \n>   == Line 347 has weird spacing: '...ue-unit    str...'\n> \n>   == Line 363 has weird spacing: '...ue-unit    str...'\n> \n>   == Line 490 has weird spacing: '...ue-unit    str...'\n> \n>   == Line 501 has weird spacing: '...file-id    lea...'\n> \n>   == Line 508 has weird spacing: '...ue-unit    str...'\n> \n>   -- Found something which looks like a code comment -- if you have code\n>      sections in the document, please surround them with '<CODE BEGINS>' and\n>      '<CODE ENDS>' lines.\n> \n> \n>   Checking references for intended status: Proposed Standard\n>   ----------------------------------------------------------------------------\n> \n>      (See RFCs 3967 and 4897 for information about using normative references\n>      to lower-maturity documents in RFCs)\n> \n>   == Unused Reference: 'RFC9375' is defined on line 1552, but no explicit\n>      reference was found in the text\n> \n>   ** Obsolete normative reference: RFC 6991 (Obsoleted by RFC 9911)\n> \n>   ** Downref: Normative reference to an Informational RFC: RFC 7446\n> \n>   -- Possible downref: Non-RFC (?) normative reference: ref. 'TMF-518'\n> ",
+      "createdAt": "2026-01-07T14:02:45Z",
+      "updatedAt": "2026-01-07T14:02:45Z",
       "closedAt": null,
       "comments": []
     }
