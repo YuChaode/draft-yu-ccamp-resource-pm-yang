@@ -2,10 +2,10 @@
 
 
 
-Common Control and Measurement Plane                               C. Yu
-Internet-Draft                                       Huawei Technologies
+CCAMP Working Group                                                X. Li
+Internet-Draft                                                    Huawei
 Intended status: Standards Track                            F. Peruzzini
-Expires: 11 July 2026                                           FiberCop
+Expires: 7 January 2027                                         FiberCop
                                                                 Y. Zheng
                                                             China Unicom
                                                                  I. Busi
@@ -17,8 +17,9 @@ Expires: 11 July 2026                                           FiberCop
                                                                  X. Zhao
                                                                    CAICT
                                                                   M. Jin
+                                                                   C. Yu
                                                      Huawei Technologies
-                                                          7 January 2026
+                                                             6 July 2026
 
 
          A YANG Data Model for Resource Performance Monitoring
@@ -43,10 +44,10 @@ About This Document
    may be found at https://datatracker.ietf.org/doc/draft-yu-ccamp-
    resource-pm-yang/.
 
-   Discussion of this document takes place on the Common Control and
-   Measurement Plane Working Group mailing list (mailto:ccamp@ietf.org),
-   which is archived at https://mailarchive.ietf.org/arch/browse/ccamp/.
-   Subscribe at https://www.ietf.org/mailman/listinfo/ccamp/.
+   Discussion of this document takes place on the CCAMP Working Group
+   Working Group mailing list (mailto:ccamp@ietf.org), which is archived
+   at https://mailarchive.ietf.org/arch/browse/ccamp/.  Subscribe at
+   https://www.ietf.org/mailman/listinfo/ccamp/.
 
    Source for this draft and an issue tracker can be found at
    https://github.com/YuChaode/draft-yu-ccamp-resource-pm-yang.
@@ -66,7 +67,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 11 July 2026.
+   This Internet-Draft will expire on 7 January 2027.
 
 Copyright Notice
 
@@ -1487,8 +1488,8 @@ module: ietf-resource-pm
 
    [ITU-T_G.874]
               International Telecommunication Union, "Management aspects
-              of optical transport network elements", ITU-T
-              Recommendation G.874 , October 2020,
+              of optical transport network elements", ITU-T G.874
+              (2020), October 2020,
               <https://www.itu.int/rec/T-REC-G.874/en>.
 
    [RFC6020]  Bjorklund, M., Ed., "YANG - A Data Modeling Language for
@@ -1578,21 +1579,21 @@ module: ietf-resource-pm
               yang-vpn-service-pm-15>.
 
    [I-D.ietf-teas-actn-pm-telemetry-autonomics]
-              Lee, Y., Dhody, D., Vilalta, R., King, D., and D.
+              Dhody, D., King, D., Vilalta, R., Busi, I., and D.
               Ceccarelli, "YANG models for Virtual Network (VN)/TE
               Performance Monitoring Telemetry and Scaling Intent
               Autonomics", Work in Progress, Internet-Draft, draft-ietf-
-              teas-actn-pm-telemetry-autonomics-16, 13 October 2025,
+              teas-actn-pm-telemetry-autonomics-18, 2 February 2026,
               <https://datatracker.ietf.org/doc/html/draft-ietf-teas-
-              actn-pm-telemetry-autonomics-16>.
+              actn-pm-telemetry-autonomics-18>.
 
    [I-D.zheng-ccamp-client-pm-yang]
               Yu, C., Zheng, H., Busi, I., Yanlei, Z., Lopez, V., and O.
               G. de Dios, "A YANG Data Model for Client Signal
               Performance Monitoring", Work in Progress, Internet-Draft,
-              draft-zheng-ccamp-client-pm-yang-13, 29 August 2025,
+              draft-zheng-ccamp-client-pm-yang-14, 26 February 2026,
               <https://datatracker.ietf.org/doc/html/draft-zheng-ccamp-
-              client-pm-yang-13>.
+              client-pm-yang-14>.
 
    [RFC8454]  Lee, Y., Belotti, S., Dhody, D., Ceccarelli, D., and B.
               Yoon, "Information Model for Abstraction and Control of TE
@@ -1609,9 +1610,9 @@ Acknowledgments
 
 Authors' Addresses
 
-   Chaode Yu
-   Huawei Technologies
-   Email: yuchaode@huawei.com
+   Xiao Li
+   Huawei
+   Email: lixiao33@huawei.com
 
 
    Fabio Peruzzini
@@ -1647,3 +1648,8 @@ Authors' Addresses
    Mingshuang Jin
    Huawei Technologies
    Email: jinmingshuang@huawei.com
+
+
+   Chaode Yu
+   Huawei Technologies
+   Email: yuchaode@huawei.com
