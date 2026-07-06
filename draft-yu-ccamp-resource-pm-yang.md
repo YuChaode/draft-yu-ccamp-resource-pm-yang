@@ -10,13 +10,13 @@ date:
 consensus: true
 v: 3
 area: "Routing"
-workgroup: "Common Control and Measurement Plane"
+workgroup: "CCAMP Working Group"
 keyword:
  - next generation
  - unicorn
  - sparkling distributed ledger
 venue:
-  group: "Common Control and Measurement Plane"
+  group: "CCAMP Working Group"
   type: "Working Group"
   mail: "ccamp@ietf.org"
   arch: "https://mailarchive.ietf.org/arch/browse/ccamp/"
@@ -25,9 +25,9 @@ venue:
 
 author:
   -
-    fullname: Chaode Yu
-    organization: Huawei Technologies
-    email: yuchaode@huawei.com
+    fullname: Xiao Li
+    organization: Huawei
+    email: lixiao33@huawei.com
   -
     name: Fabio Peruzzini
     org: FiberCop
@@ -56,6 +56,10 @@ author:
     name: Mingshuang Jin
     org: Huawei Technologies
     email: jinmingshuang@huawei.com
+  -
+    fullname: Chaode Yu
+    organization: Huawei Technologies
+    email: yuchaode@huawei.com
 
 normative:
   TMF-518:
@@ -69,8 +73,9 @@ normative:
     title: Management aspects of optical transport network elements
     author:
       org: International Telecommunication Union
-    date:  October 2020
-    seriesinfo: ITU-T Recommendation G.874
+    date:  2020-10
+    seriesinfo:
+      ITU-T: G.874 (2020)
     target: https://www.itu.int/rec/T-REC-G.874/en
 
 --- abstract
